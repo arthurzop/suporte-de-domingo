@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  padding: 1vh;
+}
+
+.nav {
+  display: flex;
+  gap: 2vw;
+}
+
+.title {
+  font-size: 13rem;
+  position: absolute;
+  left: 0;
+  line-height: 0.8;
+}
