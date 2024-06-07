@@ -1,30 +1,79 @@
 .container {
-  width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
-.title {
-  font-size: 40px;
-  font-weight: 100;
-  cursor: default;
-  display: inline-block;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.1em solid #f8f9fa; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.1em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+.container {
+  @apply flex-center full-height;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+.card {
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #f8f9fa; }
+.loader {
+  color: #f8f9fa;
+  font-weight: 200;
+  font-size: 3em;
+  box-sizing: content-box;
+  padding: 10px 10px;
+  display: flex;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #76fa6a;
+  animation: spin 4s infinite;
+}
+
+@keyframes spin {
+  10% {
+    transform: translateY(-102%);
   }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-202%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-302%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-402%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}

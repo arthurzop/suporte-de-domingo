@@ -10,8 +10,8 @@ export default function Home() {
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => {
-      setIsLoading(true);
-    }, 3000);
+      setIsLoading(false);
+    }, 4000);
   }, []);
 
   return <>{isLoading ? <Loader /> : <HomePage />}</>;
