@@ -1,9 +1,17 @@
+'use client'
+
 import style from "./home.module.css";
 import Image from "next/image";
 import Logo from '../../assets/images/Group.svg'
 import Button from '../../components/button/button'
+import Menu from '../../assets/icons/menu.svg'
+import { useState } from "react";
 
 export default function HomePage() {
+
+  const [isOpen, setIsOpen] = useState(false)
+
+
   return (
     <div className={style.container}>
       <header className={style.header}>
@@ -13,6 +21,7 @@ export default function HomePage() {
             sup <span className={style.titleDetail}>de domingo</span>
           </h1>
         </div>
+          <Image src={Menu} className={style.menu} onClick={() => { setIsOpen(!isOpen) }} />
         <div className={style.subHeader}>
           <nav className={style.navBar}>
             <p className={style.navItem}>contato</p>

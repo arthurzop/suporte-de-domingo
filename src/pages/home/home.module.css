@@ -105,3 +105,33 @@
   width: fit-content;
   gap: 2.5vw;
 }
+
+.menu{
+  display: none;
+}
+
+@media screen and (max-width: 480px){
+  .logo{
+    scale: .6;
+  }
+
+  .header{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .title{
+    display: none;
+  }
+
+  .navBar{
+    display: none;
+  }
+
+  .menu{
+    display: block;
+  }
+
+  .heroTitle{
+  }
+}
