@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url("../../assets/images/Noise.png");
+  background-color: #212121;
+  animation: up .7s forwards 4s;
 }
 
 .container {
@@ -49,6 +52,16 @@
   padding-left: 6px;
   color: #76fa6a;
   animation: spin 4s infinite;
+}
+
+@keyframes up {
+  from{
+    margin-top: 0;
+  }
+  to{
+    margin-top: -100vh;
+  }
+  
 }
 
 @keyframes spin {

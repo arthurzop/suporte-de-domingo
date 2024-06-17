@@ -1,0 +1,14 @@
+.button{
+    border: none;
+    outline: none;
+    width: fit-content;
+    padding: 2vh 4vw;
+    border-radius: 20em;
+}
+
+.buttonLabel{
+    font-weight: 700;
+    font-size: clamp(1em, 1.4em, 1.4em);
+    color: var(--branco);
+    text-transform: uppercase;
+}

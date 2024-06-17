@@ -1,15 +1,19 @@
-/* :root{
+:root {
+  --cinza-claro: #ccc;
+  --cinza-1: #212121;
+  --cinza-2: #333;
+  --branco: #f8f9fa;
+  --preto: #000
+}
 
-} */
-
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+  transition: all .5s;
 }
 
-body{
-  background-color: #212121;
-  color: #F8F9FA;
+body {
+  color: var(--branco);
 }
